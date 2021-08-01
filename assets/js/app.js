@@ -8,6 +8,7 @@ $(document).ready(function(){
       arrows: false,
       infinite: false,
       slidesToScroll: 1,
+      accessibility:true,
       responsive:[
         {
           breakpoint: 769,

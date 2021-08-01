@@ -635,7 +635,7 @@ a {
         position: absolute;
         border: 0.2rem solid #DDDDDD;
         border-radius: 100%;
-        padding: .6rem;
+        padding: .8rem;
         width: 3.5rem;
         height: 3.5rem;
         top: -7rem;
@@ -671,6 +671,7 @@ a {
       .slider-wrapper .slider-container {
         max-width: 500px; } }
     .slider-wrapper .slider-container .v-slider .slick-slide {
+      outline: none;
       padding: 0 4rem 4rem; }
       @media screen and (min-width: 1024px) {
         .slider-wrapper .slider-container .v-slider .slick-slide {
