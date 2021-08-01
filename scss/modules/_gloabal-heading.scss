@@ -1,0 +1,18 @@
+.gloabal-heading {
+  max-width: 26rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0rem 1.5rem 3.5rem;
+  @include media($default) {
+    max-width: 98rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+    @include media($default) {
+      font-size: 2.4rem;
+    }
+    @include media($xxlarge) {
+      font-size: 4rem;
+    }
+  }
+}

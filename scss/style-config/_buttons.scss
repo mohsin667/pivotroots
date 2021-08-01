@@ -1,0 +1,28 @@
+// =============================================================================
+//  BUTONS
+// =============================================================================
+
+.button {
+	background-color: $primary-color;
+	font-weight: 500;
+	color: #fff;
+	padding:1.2rem;
+	border-radius: 6px;
+	font-size: 1rem;
+	@include media($default) {
+		padding:1.15rem 3rem;
+		font-size: 2rem;
+	}
+	&:hover {
+		background-color: rgba(245, 128, 32,0.8);
+	}
+	img {
+		display: inline-block;
+		width: 10px;
+		margin-left: 10px;
+		@include media($default) {
+			width: 13px;
+			margin-left: 20px;
+		}
+	}
+}

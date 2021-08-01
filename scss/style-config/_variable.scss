@@ -1,0 +1,24 @@
+// UPES theme color
+$primary-color		    :		   #F58020;
+$base-font-color      :      #707070;
+$heading-font-color   :      #808181;
+$bar-color            :      #DDDDDD;
+$pointer              :      #2c69b3;
+
+// Media Query Screen Size's
+$tab				: 			768px;
+$medium     :       800px; 
+$default    :       1024px; 
+$large      :       1200px; 
+$xlarge     :       1400px; 
+$xxlarge    :       1600px; 
+
+
+//Fonts
+
+
+$regular    :       "Montserrat", sans-serif;
+
+@mixin trans {
+  transition: all 0.3s;
+}

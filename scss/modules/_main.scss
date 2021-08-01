@@ -1,0 +1,242 @@
+.main {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  @include media($default) {
+    margin-bottom: 3rem;
+  }
+  @include media($xxlarge) {
+    margin-bottom: 5rem;
+  }
+  .button {
+    display: inline-flex;
+    align-items: center;
+  }
+  &.mob {
+    @include media($default){
+      display: none;
+    }
+  }
+  &.desk {
+    display: none;
+    @include media($default){
+      display: flex;
+    }
+  }
+}
+
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column-reverse;
+  align-items: center;
+  @include media($default) {
+    align-items: flex-start;
+    flex-flow: row;
+    justify-content: center;
+  }
+  .pointers-wrapper {
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    @include media($default) {
+      overflow: visible;
+    }
+    @include media($large) {
+      width: 63rem;
+      margin-right: 6rem;
+    }
+    .layer {
+      display: flex;
+      flex-flow: nowrap;
+      padding-top: 8rem;
+      @include media($default) {
+        padding-top: 0;
+        padding-left: 8rem;
+        display: block;
+      }
+      @include media($xlarge) {
+        padding-left: 0;
+      }
+    }
+    .slider-pointer {
+      max-width: 63rem;
+      padding-bottom: 5rem;
+      position: relative;
+      min-width: calc(100% / 3);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+      @include media($tab) {
+        min-width: calc(100% / 5);
+      }
+      @include media($default) {
+        width:auto;
+        min-height: 8rem;
+      }
+      @include media($xlarge) {
+        margin-bottom: 1.5rem;
+      }
+
+      @include media($xxlarge) {
+        min-height: 10rem;
+        margin-bottom: 2rem;
+      }
+      &:last-child {
+        padding-bottom: 0;
+        &::before {
+          content: none;
+        }
+      }
+      &:before {
+        position: absolute;
+        display: block;
+        height: .3rem;
+        width: 100%;
+        content:"";
+        top: -5.4rem;
+        left: 50%;
+        background-color: $bar-color;
+        @include media($default) {
+          left: -6rem;
+          top: 2.5rem;
+          width: .7rem;
+          height: 100%;
+        }
+      }
+      .progress-bar {
+        position: absolute;
+        display: block;
+        width: 0%;
+        height: .3rem;
+        left: 50%;
+        top: -5.4rem;
+        background-color: $primary-color;
+        z-index: 9;
+        @include trans;
+        @include media($default) {
+          left: -6rem;
+          top: 1.5rem;
+          height: 0%;
+          width: .7rem;
+        }
+      }
+      h3 {
+        color: $heading-font-color;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-align: center;
+        @include media($default) {
+          margin-bottom: .5rem;
+          font-size: 1.8rem;
+          text-align: left;
+        }
+        @include media($xlarge) {
+          font-size: 2rem;
+        }
+      }
+      p {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.5;
+        @include media($default) {
+          font-size: 1.4rem;
+          text-align: left;
+        }
+        @include media($xlarge) {
+          font-size: 1.8rem;
+          text-align: left;
+        }
+      }
+      &.progress-complete {
+        .progress-bar {
+          width: 100%;
+          @include media($default) {
+            height: 100%;
+            width: .7rem  ;
+          }
+        }
+      }
+      &.highlighted {
+        h3 {
+          color: #000;
+        }
+        .pointer-icon {
+          background-color: $pointer;
+          border-color: transparent;
+          img {
+            &.static {
+              display: none;
+            }
+            &.highlighted {
+              display: block;
+            }
+          }
+        }
+      }
+      .pointer-icon {
+        background-color: #fff;
+        position: absolute;
+        border: .2rem solid $bar-color;
+        border-radius: 100%;
+        padding: .6rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        top: -7rem;
+        left: 50%;
+        z-index: 99;
+        @include trans; 
+        transform: translate(-50%, 0px);
+        @include media($default) {
+          transform: translate(0, 0);
+          left: -8rem;
+          border: .4rem solid $bar-color;
+          width: 5rem;
+          height: 5rem;
+          top: -1rem;
+        }
+        img {
+          height: 100%;
+          &.static {
+            display: block;
+          }
+          &.highlighted {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .slider-container {
+    width: 100%;
+    max-width: 450px;
+    @include media($default) {
+      max-width: 350px;
+      width: calc(100% - 63rem);
+    }
+    @include media($xlarge) {
+      max-width: 400px;
+    }
+    @include media($xxlarge) {
+      max-width: 500px;
+    }
+    .v-slider {
+      .slick-slide {
+        padding: 0 4rem 4rem;
+        @include media($default) {
+          padding: 0 3rem 5rem;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

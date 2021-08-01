@@ -1,0 +1,29 @@
+// Typography
+// =============================================================================
+//	MIXINS
+// =============================================================================
+
+@mixin base-font {
+    margin: 0;
+    font-family: $regular;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    font-weight: 400;
+    color: $base-font-color;
+    @include media($medium) {
+        font-size: 2rem;
+    }
+  }
+  @mixin heading-font {
+    margin: 0;
+    font-weight: 700;
+  }
+  p    {@include base-font;}
+  h1   {@include heading-font;}
+  h2   {@include heading-font;}
+  h3   {@include heading-font;}
+  h4   {@include heading-font;}
+  h4   {@include heading-font;}
+  h5   {@include heading-font;}
+  h6   {@include heading-font;}
+  
