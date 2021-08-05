@@ -619,7 +619,7 @@ a {
       .slider-wrapper .pointers-wrapper .slider-pointer p {
         text-align: center;
         line-height: 1.5;
-        font-size: .7rem; }
+        font-size: .8rem; }
         @media screen and (min-width: 768px) {
           .slider-wrapper .pointers-wrapper .slider-pointer p {
             font-size: 1rem; } }
