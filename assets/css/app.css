@@ -689,7 +689,8 @@ a {
       .slider-wrapper .slider-container {
         max-width: 500px; } }
     .slider-wrapper .slider-container .v-slider {
-      max-width: 300px; }
+      max-width: 280px;
+      margin: 0 auto; }
       @media screen and (min-width: 768px) {
         .slider-wrapper .slider-container .v-slider {
           max-width: 100%; } }

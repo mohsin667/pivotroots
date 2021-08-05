@@ -252,7 +252,8 @@
       max-width: 500px;
     }
     .v-slider {
-      max-width: 300px;
+      max-width: 280px;
+      margin: 0 auto;
       @include media($tab) {
         max-width: 100%;
       }
