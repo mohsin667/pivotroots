@@ -148,7 +148,7 @@
         margin-bottom: 1rem;
         font-weight: 700;
         text-align: center;
-        font-size: .8rem;
+        font-size: .9rem;
         @include media($tab) {
           font-size: 1.2rem;
         }
@@ -209,15 +209,16 @@
         position: absolute;
         border: .2rem solid $bar-color;
         border-radius: 100%;
-        padding: .8rem;
         width: 3.5rem;
         height: 3.5rem;
         top: -4.5rem;
         left: 50%;
         z-index: 99;
+        padding: .6rem;
         @include trans;
         transform: translate(-50%, 0px);
         @include media($default) {
+          padding: .8rem;
           transform: translate(0, 0);
           left: -8rem;
           border: .4rem solid $bar-color;
