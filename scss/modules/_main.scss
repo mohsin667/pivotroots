@@ -94,13 +94,28 @@
           content: none;
         }
       }
+      &:first-child {
+        h3 {
+          color: #000;
+        }
+        .pointer-icon {
+          background-color: $pointer;
+          border-color: transparent;
+          .static {
+            display: none;
+          }
+          .highlighted {
+            display: block;
+          }
+        }
+      }
       &:before {
         position: absolute;
         display: block;
         height: .3rem;
         width: 100%;
         content:"";
-        top: -5.4rem;
+        top: -2.8rem;
         left: 50%;
         background-color: $bar-color;
         @include media($default) {
@@ -116,7 +131,7 @@
         width: 0%;
         height: .3rem;
         left: 50%;
-        top: -5.4rem;
+        top: -2.8rem;
         background-color: $primary-color;
         z-index: 9;
         @include trans;
@@ -128,11 +143,15 @@
         }
       }
       h3 {
+        cursor: pointer;
         color: $heading-font-color;
         margin-bottom: 1rem;
-        font-size: 1.2rem;
         font-weight: 700;
         text-align: center;
+        font-size: .8rem;
+        @include media($tab) {
+          font-size: 1.2rem;
+        }
         @include media($default) {
           margin-bottom: .5rem;
           font-size: 1.8rem;
@@ -143,9 +162,12 @@
         }
       }
       p {
-        font-size: 1rem;
         text-align: center;
         line-height: 1.5;
+        font-size: .7rem;
+        @include media($tab) {
+          font-size: 1rem;
+        }
         @include media($default) {
           font-size: 1.4rem;
           text-align: left;
@@ -182,6 +204,7 @@
         }
       }
       .pointer-icon {
+        cursor: pointer;
         background-color: #fff;
         position: absolute;
         border: .2rem solid $bar-color;
@@ -189,10 +212,10 @@
         padding: .8rem;
         width: 3.5rem;
         height: 3.5rem;
-        top: -7rem;
+        top: -4.5rem;
         left: 50%;
         z-index: 99;
-        @include trans; 
+        @include trans;
         transform: translate(-50%, 0px);
         @include media($default) {
           transform: translate(0, 0);
@@ -228,6 +251,10 @@
       max-width: 500px;
     }
     .v-slider {
+      max-width: 300px;
+      @include media($tab) {
+        max-width: 100%;
+      }
       .slick-slide {
         outline: none;
         padding: 0 4rem 4rem;
