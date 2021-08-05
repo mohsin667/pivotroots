@@ -524,7 +524,7 @@ a {
     .slider-wrapper .pointers-wrapper .layer {
       display: flex;
       flex-flow: nowrap;
-      padding-top: 8rem; }
+      padding-top: 5rem; }
       @media screen and (min-width: 1024px) {
         .slider-wrapper .pointers-wrapper .layer {
           padding-top: 0;
